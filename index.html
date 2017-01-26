@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="The " Dark Side " of Code Refactoring">
+    <meta name="author" content="Diego Cedrim">
+
+    <title>Título</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="grid.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="bower_components/highlightjs/styles/xcode.css">
+    <script src="bower_components/highlightjs/highlight.pack.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <style type="text/css">
+        pre {
+            border: none;
+            background: #ffffff;
+            padding: 0px;
+        }
+        
+        .col-md-6 {
+            background: #ffffff;
+            border: none;
+            padding-bottom: 0px;
+        }
+        
+        body {
+            padding-top: 70px;
+            position: relative;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('body').scrollspy({
+                target: '#mainNavBar'
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <nav id="mainNavBar" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+                <ul class="nav navbar-nav">
+                    <li><a href="#abstract">Abstract</a></li>
+                    <li><a href="#downloads">Downloads</a></li>
+                    <li><a href="#references">References</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <div class="page-header" id="title">
+            <h1>The "Dark Side" of Code Refactoring<br/><small>Revealing Harmful Effects on Structural Quality</small></h1>
+        </div>
+        This website contains all data not presented in the paper.
+
+        <h3 class="page-header" id="abstract">Abstract</h3>
+
+        <p class="text-justify">Code smells in a program represent indications of structural quality problems, which can be addressed by software refactoring. There is an explicit assumption that software refactoring improves the structural quality of a program by reducing its
+            density of code smells. However, little has been reported about whether and to what extent developers neglect or end up creating code smells through refactoring. This paper reports a longitudinal study intended to address this gap. We analyze
+            how often commonly-used refactoring types affect the density of 13 types of code smells along the version histories of 23 projects. Our findings are based on the analysis of 29,318 refactorings distributed in 10 different types. Even though
+            more than 80% of the refactorings touched smelly elements, 63.2% did not reduce their occurrences. Surprisingly, only 12.3% of refactorings removed smells, while 24.5% induced the introduction of new ones. More than 95% of such refactoring-induced
+            smells were not removed in successive commits. All these findings suggest that refactorings tend to more frequently introduce long- living smells instead of fully eliminating existing ones. Also, we analyzed which types of refactoring affects
+            specific types of code smells more often. Through this analysis, we were able to identify refactoring-smell pairs which occurred more frequently.</p>
+
+    </div>
+    <!-- /container -->
+
+</body>
+
+</html>
