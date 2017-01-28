@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="The " Dark Side " of Code Refactoring">
-    <meta name="author" content="Diego Cedrim">
+    <meta name="description" content="How do Software Developers Identify Design Problems? A Qualitative Study">
+    <meta name="author" content="ICPCSUBMISSION">
 
     <title>ICPC - SUBMISSION</title>
 
@@ -67,6 +67,8 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
                 <ul class="nav navbar-nav">
                     <li><a href="#abstract">Abstract</a></li>
+                    <li><a href="#scenarios">Scenarios</a></li>
+                    <li><a href="#dp">Design Problems and Smells</a></li>
                     <li><a href="#downloads">Downloads</a></li>
                     <li><a href="#references">References</a></li>
                 </ul>
@@ -177,7 +179,7 @@
             <ol>
 
                 <li>R1. Four years or more of experience with software development and maintenance. We have chosen four years because this is the average time used by companies such
-                    as Yahoo and Twitter to classify a developer as experienced.</li>
+                    as Yahoo <a href="#yahoo">(Yahoo, 2016)</a> and Twitter <a href="#twitter">(Twitter, 2016)</a> to classify a developer as experienced.</li>
 
                 <li>R2. No previous knowledge about S6 and S7.</li>
 
@@ -187,10 +189,11 @@
 
             </ol>
 
-            <br>
+        </p>
 
+        <p class="text-justify">
             We included in the questionnaire a description of our definition of knowledge level, thereby allowing developers to have a similar interpretation of the possible answers.
-            Table II presents the definition of knowledge level that developers received.         
+            Table II presents the definition of knowledge level that developers received.
         </p>
 
         <table class="tg">
@@ -226,10 +229,94 @@
                     <td class="tg-yzt1">I am a specialist in this topic, and I use many features almost every day</td>
                 </tr>
         </table>
+    </div>
 
+    <div class="container">
 
+        <h3 class="page-header" id="dp">Design Problems and Code Smells</h3>
 
+        <p class="text-justify>">
+            We conducted a qualitative study to observe how developers identify design problems in the source code. We provided developers with an initial list of code smells affecting the systems. The developers had the freedom to use or not the initial list of code smells. Thus, we could investigate if developers rely on code smells as a dominant strategy to identify design problems and to what extent they can identify design problem using code smells. Following we present the design problems and the code smells used in our study.
+        </p>
 
+        <h4><u>Design Problems</u></h4>
+
+        <p class="text-justify">
+            A design problem is a part of the software design (a design fragment) that negatively impacts one or more quality attributes, such as comprehensibility, maintainability and performance <a href="#bar">(Bar, 1998)</a>;<a href="#ciupke">Ciupke, 1999</a>;<a href="suryanarayana">Suryanarayana 2014</a>;<a href="#trifu">Trifu, 2007)</a>. Following we present a brief description of thes design problems used in our study. We highlight that we let clear to developers that they were allowed to identify other types ofdesign problems.
+
+        </p>
+        <ul>
+            <li><strong>Ambiguous Interface:</strong> Interface of a design component that offers only a general, ambiguous entry-point that provides non-cohesive services, thereby complicating the clients' logic.</li>
+
+            <li><strong>Component Overload:</strong> Design components that fulfill too many responsibilities.</li>
+
+            <li><strong>Cyclic Dependency:</strong> Two or more design components that directly or indirectly depend on each other.</li>
+
+            <li><strong>Delegating Abstraction:</strong> An abstraction that exists only for passing messages from one abstraction to another.</li>
+
+            <li><strong>Fat Interface:</strong> Interface that is overloaded with many clients accessing it. That is, an interface with "too many clients".</li>
+
+            <li><strong>Scattered Concern:</strong> Multiple components that are responsible for realizing a crosscutting concern.</li>
+
+            <li><strong>Unused Abstraction:</strong> Design abstraction that is either unreachable or  never used in the system.</li>
+
+            <li><strong>Unwanted Dependency:</strong> Dependency that violates an intended design rule.</li>
+
+        </ul>
+
+        <h4><u>Code Smells</u></h4>
+
+        <p class="text-justify">
+            A code smell is a structure in the implementation of the program that possibly indicates a design problem <a href="#fowler">(Fowler, 1999)</a>. In this study, we have focus on 15 types of code smells. We present the definition of the code smells following:
+
+        </p>
+
+        <ul>
+            <li><strong>Blob Class:</strong> Long and complex class that centralizes the intelligence of the system.</li>
+
+            <li><strong>Class Data Should Be Private:</strong> A class exposing its fields, violating the principle of data hiding.</li>
+            
+            <li><strong>Complex Class:</strong> A class having at least one method having a high cyclomatic complexity.</li>
+
+            <li><strong>Data Class:</strong> A class has this code smell when it has only fields, getting and setting methods for the fields, and nothing else. The aim is to hold data and, consequently, be manipulated by other classes.</li>
+
+            <li><strong>Divergent Change:</strong> This code smell occurs when one class is commonly changed in different ways for different reasons.</li>
+
+            <li><strong>Feature Envy:</strong> Feature envy occurs in a class when the method of that class seems more interested in a class other than the one it actually belongs.</li>
+
+            <li><strong>God Class:</strong> This code smell occurs when the class centralizes more the one functionality, realizing more than one purpose.</li>
+
+            <li><strong>Lazy Class: A class having very small dimension, few methods and with low complexity.</strong> </li>
+
+            <li><strong>Long Method:</strong> This code smell occurs when a method has grown too large, containing too many lines of code.</li>
+
+            <li><strong>Long Parameter List:</strong> This code smell occurs in a method that has a long list of parameters, in which makes readability and code quality worse.</li>
+
+            <li><strong>Message Chain:</strong> A long chain of method invocations is performed to implement a class functionality.</li>
+            <li><strong>Refused Bequest:</strong> A subclass that uses only some of the methods and properties inherited from its parents.</li>
+
+            <li><strong>Shotgun Surgery:</strong> This code smell is the opposite of Divergent Change. It happens when every time a kind of change is made in the code, that change triggers many little changes in many different classes.</li>
+
+            <li><strong>Spaghetti Code:</strong> A class implementing complex methods interacting with them, with no parameters, using global variables.</li>
+
+            <li><strong>Speculative Generality:</strong> A class declared as abstract having very few children classes that use its methods.</li>
+
+        </ul>
+
+    </div>
+
+    <div class="container">
+        <h3 class="page-header" id="references">References</h3>
+
+		<p>
+		<ol>
+            <li id="trifu">A. Trifu and U. Reupke, <i>Towards automated restructuring of object oriented systems</i> in Proceedings of the 11th European Conference on Software Maintenance and Reengineering, 2007.</li>
+            <li id="bar">H. Bär and O. Ciupke, <i>Exploiting design heuristics for automatic problem detection</i> in Workshop Ion on Object-Oriented Technology, 1998.</li>
+            <li id="twitter">Twitter. <i>Working at Twitter"</i>. Available at <a href="https://about.twitter.com/careers" target="_blank">https://about.twitter.com/careers</a></li>
+            <li id="yahoo">Yahoo!. <i>Explore Career Opportunities"</i>. Available at <a href="https://careers.yahoo.com/us/buildyourcareer" target="_blank">https://careers.yahoo.com/us/buildyourcareer</a></li>
+            <li id="fowler">M. Fowler. <i>Refactoring: Improving the Design of Existing Code.</i> Addison-Wesley, Boston, MA, USA, 1999.</li>
+			<li id="suryanarayana">G. Suryanarayana, G. Samarthyam, and T. Sharma. <i>Refactoring for Software Design Smells: Managing Technical Debt.</i> Morgan Kaufmann, 2014.</li>
+		
     </div>
 
 </body>
