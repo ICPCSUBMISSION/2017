@@ -9,13 +9,15 @@
     <meta name="description" content="The " Dark Side " of Code Refactoring">
     <meta name="author" content="Diego Cedrim">
 
-    <title>Título</title>
+    <title>ICPC - SUBMISSION</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="grid.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="design.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -77,21 +79,158 @@
     <div class="container">
 
         <div class="page-header" id="title">
-            <h1>The "Dark Side" of Code Refactoring<br/><small>Revealing Harmful Effects on Structural Quality</small></h1>
+            <h1>How do Software Developers Identify Design Problems?<br/>
+            <small>A Qualitative Study</small></h1>
         </div>
-        This website contains all data not presented in the paper.
+
+        This web page presents the supplementary material of the paper <i>How do Software Developers Identify Design Problems? A Qualitative Study</i>. <br><br>
+        
+        Following sections present the complementary information regarding the paper:
+
+        <ol>
+			
+				<li><a href="#abstract">Abstract</a>: presents the questionnaire submitted to developers and how we used it to create the list of design problems and code elements.</li>
+				
+				<li><a href="#fullpaper">Submitted Paper</a>: presents the link to download the paper submitted at ICPC 2017.</li>
+			
+		</ol>
 
         <h3 class="page-header" id="abstract">Abstract</h3>
 
-        <p class="text-justify">Code smells in a program represent indications of structural quality problems, which can be addressed by software refactoring. There is an explicit assumption that software refactoring improves the structural quality of a program by reducing its
-            density of code smells. However, little has been reported about whether and to what extent developers neglect or end up creating code smells through refactoring. This paper reports a longitudinal study intended to address this gap. We analyze
-            how often commonly-used refactoring types affect the density of 13 types of code smells along the version histories of 23 projects. Our findings are based on the analysis of 29,318 refactorings distributed in 10 different types. Even though
-            more than 80% of the refactorings touched smelly elements, 63.2% did not reduce their occurrences. Surprisingly, only 12.3% of refactorings removed smells, while 24.5% induced the introduction of new ones. More than 95% of such refactoring-induced
-            smells were not removed in successive commits. All these findings suggest that refactorings tend to more frequently introduce long- living smells instead of fully eliminating existing ones. Also, we analyzed which types of refactoring affects
-            specific types of code smells more often. Through this analysis, we were able to identify refactoring-smell pairs which occurred more frequently.</p>
+        <p class="text-justify">
+            Software systems have been discontinued or restructure due to the presence of design problems. However, identifying design problems is a challenging task. For instance, developers have to locate and analyze several elements to identify a single design problem. In order to help the developers with this task, we investigate how they perform it nowadays. We conducted a study in which we observed developers identifying design problems in systems that they have knowledge of the implementation and in systems they did not have knowledge. Our results indicate that developers face similar issues in both scenarios. They also combine different strategies to identify design problems. One of the strategies regards of the use of code smells. When they used the code smells, they identified design problems that the developers that have knowledge of the systems could not identify. Our results are relevant because they shed lights on the way the developers identify design problems. Thus, other studies can focus on improving the identification based on our findings.
+            </p>
 
     </div>
     <!-- /container -->
+
+    <div class="container">
+
+        <h3 class="page-header" id="scenarios">Studied Scenarios and Participants</h3>
+        We conducted a qualitative study to observe how developers identify design problems in the source code. In order to conduct the study, we observed developers in two scenarios:
+        
+        
+        <h4><u>Scenario 1: Developers that are familiar with the analyzed systems</u></h4>
+        
+        <p class="text-justify"> 
+            The first scenario comprises developers allocated to identify design problems in systems with which they are familiar, i.e., systems that they implemented. In order to select developers
+            for this scenario, we searched for software companies that could provide us with: (i) developers, and (ii) systems where identification of design problems was currentlyseen as critical.
+            We selected two software companies, in which provided us five software systems. Table I summarizes the characterization of the software companies.</p>
+
+        <p>
+        <table class="tg">
+            <caption>
+                Table I. Characterization of the Software Companies
+            </caption>
+            <tr>
+                <th class="tg-be9c">Characteristic</th>
+                <th class="tg-xpce">Company 1</th>
+                <th class="tg-xpce">Company 2</th>
+            </tr>
+            <tr>
+                <td class="tg-yzt1">Company Type</td>
+                <td class="tg-uqo3">Private Company</td>
+                <td class="tg-uqo3">Government Company</td>
+            </tr>
+            <tr>
+                <td class="tg-yzt1">Number of Employees</td>
+                <td class="tg-uqo3">150</td>
+                <td class="tg-uqo3">80</td>
+            </tr>
+            <tr>
+                <td class="tg-yzt1">Number of developers in a team</td>
+                <td class="tg-uqo3">3 - 7</td>
+                <td class="tg-uqo3">3 - 4</td>
+            </tr>
+            <tr>
+                <td class="tg-yzt1">Domain</td>
+                <td class="tg-uqo3">Industrial Automation</td>
+                <td class="tg-uqo3">Government Administration</td>
+            </tr>
+            <tr>
+                <td class="tg-yzt1">Development Process</td>
+                <td class="tg-uqo3">Prescriptive and Agile</td>
+                <td class="tg-uqo3">Prescriptive</td>
+            </tr>
+            <tr>
+                <td class="tg-yzt1">Program Languange</td>
+                <td class="tg-uqo3">Java, Android, iOS</td>
+                <td class="tg-uqo3">Java</td>
+            </tr>
+            <tr>
+                <td class="tg-yzt1">Selected Sofware Systems</td>
+                <td class="tg-uqo3">S1, S2, S3</td>
+                <td class="tg-uqo3">S4, S5</td>
+            </tr>
+        </table>
+
+
+        <p>
+        <h4><u>Scenario 2: Developers that are unfamiliar with the analyzed systems</u></h4>
+
+        <p class="text-justify">
+            The second scenario comprises developers assigned to identify design problems in systems with which they are unfamiliar, i.e., systems that they did not implement. 
+            In order to select developers for this scenario, we recruited a set of developers, and we asked them to answer a questionnaire. The goal was to determine which of 
+            them were eligible for the study. The questionnaire covers information to characterize the developers about their education level and knowledge of Java programming 
+            and code smells. In order to select a developer for the study, he would need to meet some requirements.Thus, we analyzed their answers based on the following requirements:
+
+            <ol>
+
+                <li>R1. Four years or more of experience with software development and maintenance. We have chosen four years because this is the average time used by companies such
+                    as Yahoo and Twitter to classify a developer as experienced.</li>
+
+                <li>R2. No previous knowledge about S6 and S7.</li>
+
+                <li>R3. At least basic knowledge about code smells.</li>
+
+                <li>R4. At least intermediary knowledge on Java programming. </li>
+
+            </ol>
+
+            <br>
+
+            We included in the questionnaire a description of our definition of knowledge level, thereby allowing developers to have a similar interpretation of the possible answers.
+            Table II presents the definition of knowledge level that developers received.         
+        </p>
+
+        <table class="tg">
+            <caption>
+            Table II. Knowledge classification
+            </caption>
+                <tr> 
+                    <th class="tg-be9c">Classification</th>
+                    <th class="tg-be9c">Description</th>
+                </tr>
+                <tr>
+                    <td class="tg-yzt1">None</td>
+                    <td class="tg-yzt1">I have never heard about it</td>
+                </tr>
+                <tr>
+                    <td class="tg-yzt1">Minimum</td>
+                    <td class="tg-yzt1">I have heard about it, but I do not use it</td>
+                </tr>
+                <tr>
+                    <td class="tg-yzt1">Basic</td>
+                    <td class="tg-yzt1">I have a general understanding, but I almost never use it</td>
+                </tr>
+                <tr>
+                    <td class="tg-yzt1">Intermediary</td>
+                    <td class="tg-yzt1">I have a good understanding, and I use basic features sometimes</td>
+                </tr>
+                <tr>
+                    <td class="tg-yzt1">Advanced</td>
+                    <td class="tg-yzt1">I have a deep understanding, and I often use advanced features</td>
+                </tr>
+                <tr>
+                    <td class="tg-yzt1">Expert</td>
+                    <td class="tg-yzt1">I am a specialist in this topic, and I use many features almost every day</td>
+                </tr>
+        </table>
+
+
+
+
+    </div>
 
 </body>
 
