@@ -9,7 +9,7 @@
     <meta name="description" content="How do Software Developers Identify Design Problems? A Qualitative Study">
     <meta name="author" content="ICPCSUBMISSION">
 
-    <title>ICPC - SUBMISSION</title>
+    <title>ICPC - SUBMISSION: How do Software Developers Identify Design Problems? A Quali Study</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -64,12 +64,12 @@
     <nav id="mainNavBar" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-7">
                 <ul class="nav navbar-nav">
                     <li><a href="#abstract">Abstract</a></li>
                     <li><a href="#scenarios">Scenarios</a></li>
                     <li><a href="#dp">Design Problems and Smells</a></li>
-                    <li><a href="#downloads">Downloads</a></li>
+                    <li><a href="#download">Download</a></li>
                     <li><a href="#references">References</a></li>
                 </ul>
             </div>
@@ -85,17 +85,8 @@
             <small>A Qualitative Study</small></h1>
         </div>
 
-        This web page presents the supplementary material of the paper <i>How do Software Developers Identify Design Problems? A Qualitative Study</i>. <br><br>
-        
+        This web page presents the supplementary material of the paper <i>How do Software Developers Identify Design Problems? A Qualitative Study</i>. <br>
         Following sections present the complementary information regarding the paper:
-
-        <ol>
-			
-				<li><a href="#abstract">Abstract</a>: presents the questionnaire submitted to developers and how we used it to create the list of design problems and code elements.</li>
-				
-				<li><a href="#fullpaper">Submitted Paper</a>: presents the link to download the paper submitted at ICPC 2017.</li>
-			
-		</ol>
 
         <h3 class="page-header" id="abstract">Abstract</h3>
 
@@ -166,6 +157,52 @@
             </tr>
         </table>
 
+        <br>
+        <p class="text-justify">
+            The two selected companies provided us the following five systems:
+        </p>
+
+        <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+        .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+        .tg .tg-kqkn{font-weight:bold;background-color:#67fd9a;text-align:center}
+        .tg .tg-j4kc{background-color:#efefef;text-align:center}
+        .tg .tg-bsv2{background-color:#efefef}
+        </style>
+        <table class="tg" style="undefined;table-layout: fixed; width: 648px">
+            <colgroup>
+            <col style="width: 142px">
+            <col style="width: 506px">
+            </colgroup>
+            <tr>
+                <th class="tg-kqkn" colspan="2">Company 1</th>
+            </tr>
+            <tr>
+                <td class="tg-j4kc">S1</td>
+                <td class="tg-bsv2">It supports the management of registry offices for audit and control from the Justice Court of the country to which the company belongs.</td>
+            </tr>
+            <tr>
+                <td class="tg-j4kc">S2</td>
+                <td class="tg-bsv2">It is a computational solution for maintaining information on the patients' health status and care received by them during their life (health history). It uses electronic medical records to integrate the patients' clinical and administrative information.</td>
+            </tr>
+            <tr>
+                <td class="tg-j4kc">S3</td>
+                <td class="tg-bsv2">It is a system developed to trace products from a production line. This system allows tracking products from its original location to retail locations where consumers purchase them.</td>
+            </tr>
+            <tr>
+                <td class="tg-kqkn" colspan="2">Company 2</td>
+            </tr>
+            <tr>
+                <td class="tg-j4kc">S4</td>
+                <td class="tg-bsv2">It is responsible for controlling the entrance of products from the state that the company belongs. It also processes tax revenues.</td>
+            </tr>
+            <tr>
+                <td class="tg-j4kc">S5</td>
+                <td class="tg-bsv2">It is a system developed for standardizing budget in the same state that the company belongs. Both systems are considered critical by the state's government since they handle with with the state budget control.</td>
+            </tr>
+        </table>
+
 
         <p>
         <h4><u>Scenario 2: Developers that are unfamiliar with the analyzed systems</u></h4>
@@ -229,7 +266,14 @@
                     <td class="tg-yzt1">I am a specialist in this topic, and I use many features almost every day</td>
                 </tr>
         </table>
+
+        <br>
+        <p class="text-justify">
+            We selected two systems from the <a href="http://oodt.apache.org/" target="_blank">Apache OODT</a> project (Push Pull and Workflow Manager), and we asked developers of Group 2 to identify design problems in these systems. We selected these systems because they have a well-defined set of design problems identified by developers who actually implemented the systems. We gave them a document containing: (i) a brief description of Push Pull (S6) and Workflow Manager (S7), and (ii) a very high level description of their design blueprint. We gave them these documents because when they have to maintain unfamiliar systems, they need to have some minimal information about the systems to be maintained. We used the same document provided in the OODT project. Document with the description of both systems can be downloaded at <a href="download/oodtdoc.zip">here</a>. A full description of the Push Pull and Working Manager as well as other OODT systems can be downloaded at <a href="http://oodt.apache.org/site_docs/oodt/index.html" target="_blank">OODT website</a>.</br>
+        </p>
     </div>
+
+    
 
     <div class="container">
 
@@ -242,7 +286,7 @@
         <h4><u>Design Problems</u></h4>
 
         <p class="text-justify">
-            A design problem is a part of the software design (a design fragment) that negatively impacts one or more quality attributes, such as comprehensibility, maintainability and performance <a href="#bar">(Bar, 1998)</a>;<a href="#ciupke">Ciupke, 1999</a>;<a href="suryanarayana">Suryanarayana 2014</a>;<a href="#trifu">Trifu, 2007)</a>. Following we present a brief description of thes design problems used in our study. We highlight that we let clear to developers that they were allowed to identify other types ofdesign problems.
+            A design problem is a part of the software design (a design fragment) that negatively impacts one or more quality attributes, such as comprehensibility, maintainability and performance <a href="#bar">(Bar, 1998)</a>;<a href="#ciupke">Ciupke, 1999</a>;<a href="suryanarayana">Suryanarayana 2014</a>;<a href="#trifu">Trifu, 2007)</a>. In order to support developers during the identification of design problems, we provide them a guide characterizing different types of design problems at the beginning of the task (Activity 2 - Problems identification). This guide contains a brief description of the design problems used in our study. We highlight that we let clear to developers that they were allowed to identify other types of design problems. Following we present the design problems used in the study, as well as the description used to create the guide.
 
         </p>
         <ul>
@@ -306,6 +350,41 @@
     </div>
 
     <div class="container">
+
+        <h3 class="page-header" id="download">Download</h3>
+
+        <p class="text-justify">
+            Following we present the main artifacts used in the study. For privacy reasons, we do not provide examples of the videos recorded in the environment, neither the audio transcription
+        </p>
+
+        <table class="tg">
+            <tr>
+                <th class="tg-be9c">Artifact</th>
+            </tr>
+            <tr>
+                <td class="tg-yzt1"><a href="download/onlineform.pdf">Online Form (model)</a></td>
+            </tr>
+            <tr>
+                <td class="tg-yzt1"><a href="download/Follow-up.pdf">Follow-up Questionnaire</a></td>
+            </tr>
+            <tr>
+                <td class="tg-yzt1"><a href="download/PushuPull-OODT.pdf">PushuPull description</a></td>
+            </tr>
+            <tr>
+                <td class="tg-yzt1"><a href="download/Workflow-OODT.pdf">Workflow Manager description</a></td>
+            </tr>
+            <tr>
+                <td class="tg-yzt1"><a href="download/guide.pdf">Guide with the Design Problems and Code Smells</a></td>
+            </tr>
+            <tr>
+                <td class="tg-yzt1"><a href="download/paper.pdf">Submitted Paper</a></td>
+            </tr>
+            
+        </table>
+
+    </div>
+
+    <div class="container">
         <h3 class="page-header" id="references">References</h3>
 
 		<p>
@@ -318,6 +397,7 @@
 			<li id="suryanarayana">G. Suryanarayana, G. Samarthyam, and T. Sharma. <i>Refactoring for Software Design Smells: Managing Technical Debt</i>. Morgan Kaufmann, 2014.</li>
 		
     </div>
+
 
 </body>
 
